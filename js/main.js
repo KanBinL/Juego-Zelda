@@ -110,31 +110,58 @@ function moverJugador(puntos){
                 var posicionX = j;
                 var posicionY = i;
                 var tdJugador = td;
+                td.classList.remove("personaje");
                 td.style.backgroundColor = "black";
             }
         }
     }
     
-    let derecha = posicionX + puntos;
-    let bajar = posicionY + puntos;
+    let bajar = posicionX + puntos;
+    let derecha = posicionY + puntos;
     let izquierda = posicionX - puntos;
     let subir = posicionY - puntos;
 
-    let tdX = d.getElementById("celda" + posicionY + moverX);
-    let tdY = d.getElementById("celda" + moverY + posicionX);
 
-    tdX.setAttribute("style", "background-color: bisque;");
-    tdY.setAttribute("style", "background-color: bisque;");
 
-    tdX.addEventListener("click",(evento)=>{
-        tdX.setAttribute("style", "background-color: green;");
-        tdJugador.setAttribute("style", "background-color: aqua;");
-    })
-    
 
-    tdY.addEventListener("click",(evento)=>{
-        tdY.setAttribute("style", "background-color: green;");
-        tdJugador.setAttribute("style", "background-color: aqua;");
-    })
+
+    if (bajar < 10) {
+        var bajarx = document.getElementById("celda" + bajar + posicionY);
+        bajarx.setAttribute("style", "background-color: green;");
+        bajarx.addEventListener("click",(evento)=>{
+            bajarx.className = "personaje";
+            tdJugador.setAttribute("style", "background-color: red;");
+        })
+    }
+
+    if(derecha < 10){
+        var derechay = document.getElementById("celda" + posicionX + derecha);
+        derechay.setAttribute("style", "background-color: green;");
+        derechay.addEventListener("click",(evento)=>{
+            derechay.className = "personaje";
+            tdJugador.setAttribute("style", "background-color: blue;");
+        })
+    }
+
+    if(izquierda < 10 && izquierda > -1){
+        var izquierdax = document.getElementById("celda" + izquierda + posicionY);
+        izquierdax.setAttribute("style", "background-color: green;");
+        izquierdax.addEventListener("click",(evento)=>{
+            izquierdax.className = "personaje";
+            tdJugador.setAttribute("style", "background-color: aqua;");
+        })
+    }
+
+    if(subir < 10 && subir > -1){
+        var subiry = document.getElementById("celda" + posicionX + subir);
+        subiry.setAttribute("style", "background-color: green;");
+        subiry.addEventListener("click",(evento)=>{
+            subiry.className = "personaje"
+            tdJugador.setAttribute("style", "background-color: aqua;");
+        })
+    }
+
+
+
 }
 
