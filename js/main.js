@@ -137,29 +137,18 @@ function moverJugador(puntos){
     if(derecha < 10){
         var derechay = document.getElementById("celda" + posicionX + derecha);
         derechay.setAttribute("style", "background-color: green;");
-        derechay.addEventListener("click",(evento)=>{
-            derechay.className = "personaje";
-            tdJugador.setAttribute("style", "background-color: blue;");
-        })
+ 
     }
 
-    if(izquierda < 10 && izquierda > -1){
-        var izquierdax = document.getElementById("celda" + izquierda + posicionY);
-        izquierdax.setAttribute("style", "background-color: green;");
-        izquierdax.addEventListener("click",(evento)=>{
-            izquierdax.className = "personaje";
-            tdJugador.setAttribute("style", "background-color: aqua;");
-        })
-    }
+    // if(izquierda < 10 && izquierda > -1){
+    //     var izquierdax = document.getElementById("celda" + izquierda + posicionY);
+    //     izquierdax.setAttribute("style", "background-color: green;");
+    // }
 
-    if(subir < 10 && subir > -1){
-        var subiry = document.getElementById("celda" + posicionX + subir);
-        subiry.setAttribute("style", "background-color: green;");
-        subiry.addEventListener("click",(evento)=>{
-            subiry.className = "personaje"
-            tdJugador.setAttribute("style", "background-color: aqua;");
-        })
-    }
+    // if(subir < 10 && subir > -1){
+    //     var subiry = document.getElementById("celda" + posicionX + subir);
+    //     subiry.setAttribute("style", "background-color: green;");
+    // }
 
 
 
