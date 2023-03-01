@@ -1,8 +1,4 @@
 'use strict';
-
-// Sirve para imprimir en el html
-window.onload = inicio;
-
 // Facilitar el uso de document
 let d = document;
 
@@ -21,6 +17,8 @@ function inicio(){
     crearMapa();
     crearBoton();
 }
+
+
 
 function crearMapa() {
     let tabla = d.createElement("table");
@@ -406,3 +404,6 @@ function dibujar(punto){
     }
 
 }
+
+
+window.onload = inicio;
