@@ -14,6 +14,8 @@ td{
 
 /* Fondo de la tabla */
 table{
+    position: relative;
+    bottom: 30px;
     border-collapse: collapse;
     background-color: #06E400;
     background-repeat: no-repeat;
@@ -66,16 +68,14 @@ table{
 }
 
 .info_dado{
-  position: relative;
-  top: 20px;
   font: oblique bold 120% cursive;
-  color: #FAF046;
+  color: #9abba3;
 }
 
 /* Diseñar el boto para tirar dado */
 .tirar{
   position: relative;
-  top: 25px;
+  bottom: 15px;
   width: 75px;
   border-radius: 50px;
   font-family: 'Helvetica', sans-serif;
@@ -88,8 +88,6 @@ table{
 
 /* Diseño para el dado en 3D */
 div.espacio3D {
-    position: relative;
-    top: 100px;
     width: 150px;
     height: 150px;
     /* margin: 3em auto 0 auto;
