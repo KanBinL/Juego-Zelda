@@ -202,7 +202,6 @@ function moverJugador(puntos){
             for (let j = 0; j < 10; j++) {
                 let td = d.getElementById("celda" + i + j);
                 if (td.classList[0] == "personaje"  || td.classList[1] == "personaje") {
-                    console.log(td);
                     var posicionX = j;
                     var posicionY = i;
                     
@@ -261,14 +260,12 @@ function moverJugador(puntos){
 
 // Este fusion sirve para administrar, todo los acciones que el usuario hace a la hora de mover.
 function movimiento(e){
-    console.log(e.target.classList[0]);
     if(e.target.classList[0]=="mover" || e.target.classList[1]=="mover"){
         //Buscar donde estaba el jugador antes, y borrarlo, para para asignar nuevo celda.
         let jugador = buscarElemento("personaje");
         jugador.forEach(element => {
             element.setAttribute("style", cespe);
             element.classList.remove("personaje");
-            console.log("borrar personaje anterior");
             if(element.id=="celda00"){
                 element.setAttribute("style", casa);
             }
